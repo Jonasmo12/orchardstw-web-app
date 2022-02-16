@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+{% include '_navbar.html' %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 bg-background" style="">
+            <h2 class="bg-heading">The Orchards Primary School TW (TOPS).</h2>
+            <h5 style="color: #fff;">
+            	Nothing but the best.
+            </h5>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+	<div class="row">
+		<h5 style="font-family: 'Dancing Script', cursive;">Message from the principal.</h5>
+		<div class="col-lg-4"></div>
+		<div class="col-lg-8">
+			
+			<p>
+				Phasellus bibendum feugiat sem, a tristique justo venenatis vitae. <br><br>Nullam rutrum ac massa sed efficitur. Vivamus id nulla ligula. Fusce id arcu nec tellus elementum cursus in vitae ante. Phasellus pulvinar eros nisi, blandit condimentum mi semper vel. Curabitur volutpat libero sit amet lectus scelerisque placerat.
+			</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="container mt-5 mb-5">
+	<div class="row">
+		<h4>News.</h4>
+		<p class="mb-5" style="color: grey;">
+			Phasellus bibendum feugiat sem, a tristique justo venenatis vitae. Nullam rutrum ac massa sed efficitur. Vivamus id nulla ligula. 
+		</p>
+
+		{% for event in events %}
+		<div class="col-lg-4 col-md-12 col-sm-12">
+			<div class="card border-light shadow bg-white border-0" style="width: 18rem;">
+			  <div class="card-body">
+			    <a href="{% url 'event:event' slug=event.slug %}"><h2 class="card-title">{{event | title}}</h2></a>
+			    <h6 class="card-subtitle mb-2 text-muted" style="font-size: 10px; font-style: bold;">{{ event.date_created }}</h6>
+			    <p class="card-text" style="">{{ event.description | slice:":150"}}</p>
+			    
+			  </div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+{% include 'gallery.html' %}
+
+
+
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-lg-12">
+			<h4>About.</h4>
+			<h5>Mission.</h5>
+			<h5>Vision.</h5>
+		</div>
+	</div>
+</div>
+
+{% include 'contact.html' %}
+
+
+{% include 'footer.html' %}
+
+<style type="text/css">
+
+</style>
+
+{% endblock %}
