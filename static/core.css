@@ -4,28 +4,12 @@ body, html {
     font-family: 'Roboto', sans-serif !important;
 }
 
-.bg-background {
-    background: url('images/2.jpg') center center no-repeat;
-    background-size: cover;
-    height: 75vh;
-    position: relative;
-}
-
-.bg-heading {
-    padding-top: 220px !important;
-    color: #fff;
-}
-
-a {
-    text-decoration: none !important;
-    color: #e54a00 !important;
-}
-
-a:hover {
-    color: grey !important;
-}
 
 .w-100 {
     object-fit: cover !important;
     height: 60vh !important;
+}
+
+p {
+    font-size: 16px !important;
 }
