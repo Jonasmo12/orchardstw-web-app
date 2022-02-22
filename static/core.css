@@ -10,6 +10,10 @@ body, html {
     height: 60vh !important;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 p {
     font-size: 16px !important;
 }
