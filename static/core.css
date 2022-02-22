@@ -24,3 +24,8 @@ a {
 a:hover {
     color: grey !important;
 }
+
+.w-100 {
+    object-fit: cover !important;
+    height: 60vh !important;
+}
