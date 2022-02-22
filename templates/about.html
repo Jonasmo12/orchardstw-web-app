@@ -3,9 +3,9 @@
 {% block content %}
 
 
+{% include '_navbar.html' %}
 
-
-<div class="container mt-5" id="about">
+<div class="container mb-5" id="about">
 	<div class="row">
 		<div class="col-lg-12 mb-5">
 			<h4>About.</h4>
@@ -39,8 +39,13 @@
 </div>
 
 
-<style type="text/css">
+{% include 'footer.html' %}
 
+
+<style type="text/css">
+	#about {
+		margin-top: 8rem;
+	}
 	
 </style>
 

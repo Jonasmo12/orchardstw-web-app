@@ -26,3 +26,25 @@ class EventDetailView(View):
 		return render(request, self.template_name, context)
 
 
+class AboutView(View):
+	template_name = 'about.html'
+
+	def get(self, request, *args, **kwargs):
+		context = {}
+		return render(request, self.template_name, context)
+
+
+class ContactView(View):
+	template_name = 'contact.html'
+
+	def get(self, request, *args, **kwargs):
+		context = {}
+		return render(request, self.template_name, context)
+
+
+class SchoolView(View):
+	template_name = 'gallery.html'
+
+	def get(self, request, *args, **kwargs):
+		context = {}
+		return render(request, self.template_name, context)

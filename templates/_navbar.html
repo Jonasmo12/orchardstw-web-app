@@ -20,16 +20,16 @@
           <a class="nav-link" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#news">News</a>
+          <a class="nav-link" href="/">News</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#school">Our School</a>
+          <a class="nav-link" href="{% url 'event:school' %}">Our School</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="{% url 'event:about' %}">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="{% url 'event:contact' %}">Contact</a>
         </li>
         
       </ul>
