@@ -1,93 +1,39 @@
-<style>
-.site-heading h3{
-    font-size : 40px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-.border {
-    background: #d1360e;
-    height: 2px;
-    width: 165px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
-}
-/* Blog-CSS */
-.blog-box {
-    padding: 0 0px;
-    transition: .5s;
-    border: 1px solid #e2e2e2;
-    margin-bottom: 30px;
-}
-.blog-box-content h4 a {
-    font-size: 20px;
-    padding: 0px 0 0px;
-    text-transform: uppercase;
-    color:#2b2b2b;
-     text-decoration:none;
-    
-}
-.blog-box-content h4:hover {
-    color:#000;
-     text-decoration:none;
-    
-}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
-.blog-box-content {
-padding: 0 20px 20px;
-}
-.blog-box-text h4 a {
-    color: #333;
-}
-</style>
 
-<div class="site-heading text-center">
-						<h3>Our Portfolio</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua. Ut enim ad minim </p>
-						<div class="border"></div>
-					</div>
+
+<div class="container-fluid mt-5">
+	<div class="row">
+		<div class="col-lg-12">
+			
+		</div>
 	</div>
-	<div class="row text-center">
-	       <div class="col-sm-6 col-md-4">
-							<div class="blog-box">
-								<div class="blog-box-image">
-									<img src="https://images.pexels.com/photos/6384/woman-hand-desk-office.jpg?w=940&h=650&auto=compress&cs=tinysrgb" class="img-responsive" alt="">
-								</div>
-								<div class="blog-box-content">
-									<h4><a href="#">quis porta tellus dictum</a></h4>
-									<p>Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. 
-									Sed ornare ligula eget tortor tempor, quis porta tellus dictum.</p>
-									<a href="" class="btn btn-default site-btn">Read More</a>
-								</div>
-							</div>
-						</div> <!-- End Col -->					
-			<div class="col-sm-6 col-md-4">
-							<div class="blog-box">
-								<div class="blog-box-image">
-									<img src="https://images.pexels.com/photos/374897/pexels-photo-374897.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" class="img-responsive" alt="">
-								</div>
-								<div class="blog-box-content">
-									<h4><a href="#">quis porta tellus dictum</a></h4>
-									<p>Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. 
-									Sed ornare ligula eget tortor tempor, quis porta tellus dictum.</p>
-									<a href="" class="btn btn-default site-btn">Read More</a>
-								</div>
-							</div>
-						</div> <!-- End Col -->				
-			<div class="col-sm-6 col-md-4">
-							<div class="blog-box">
-								<div class="blog-box-image">
-									<img src="https://images.pexels.com/photos/541522/pexels-photo-541522.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" class="img-responsive" alt="">
-								</div>
-								<div class="blog-box-content">
-									<h4><a href="#">quis porta tellus dictum</a></h4>
-									<p>Phasellus lorem enim, luctus ut velit eget, convallis egestas eros. 
-									Sed ornare ligula eget tortor tempor, quis porta tellus dictum.</p>
-									<a href="" class="btn btn-default site-btn">Read More</a>
-								</div>
-							</div>
-						</div> <!-- End Col -->
+</div>
+
+
+<div class="container mb-5" style="margin-top: 8rem">
+    <div class="row">
+        <div class="col-lg-12" style="">
+            <h4 id="event-title">{{ event.title | title }}</h4>
+            <p style="font-size: 12px;" class="lead">{{ event.date_created }}</p>
+            <p>{{ event.description | linebreaks }}</p>
+        </div>
     </div>
 </div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="text-right mt-5">
+				<a href="/">return home</a>
+			</p>
+		</div>
+	</div>
 </div>
+
+{% include "footer.html" %}
+
+
+{% endblock %}

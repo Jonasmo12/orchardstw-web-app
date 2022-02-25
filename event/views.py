@@ -21,8 +21,9 @@ class EventDetailView(View):
 
 	def get(self, request, slug):
 		event = Event.objects.get(slug=slug)
+		events = Event.objects.all()
 
-		context = {'event': event}
+		context = {'event': event, 'events': events}
 		return render(request, self.template_name, context)
 
 
