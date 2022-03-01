@@ -28,7 +28,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     
-    'apps.vacancy.apps.VacancyConfig.vacancy',
     'event',
 ]
 
