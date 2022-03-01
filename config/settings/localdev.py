@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    
+    'apps.vacancy.apps.VacancyConfig.vacancy',
     'event',
 ]
 
