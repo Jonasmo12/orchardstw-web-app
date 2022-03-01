@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container-fluid bg-news">
+	<div class="row">
+		<div class="col-lg-12">
+			<h4 class="mt-5 text-center">
+				Vacancies.
+			</h4>
+			<p class="text-center">
+				posts issued by the school.
+			</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="container mb-5" style="margin-top: 8rem">
+    <div class="row">
+        <div class="col-lg-12" style="">
+			{% for vacancy in vacancies %}
+			<a href=""><strong>{{ vacancy.title }}, closing {{ vacancy.closing_date }}</strong></a>
+			{% endfor %}        	
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-lg-12">
+			<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item"><a href="/">Home</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">Vacancies</li>
+			  </ol>
+			</nav>
+			<!-------
+			<p class="text-right mt-5">
+				<a class="btn btn-sm btn-primary" href="/">Return Home</a>
+			</p>
+			------>
+		</div>
+	</div>
+</div>
+
+{% include "footer.html" %}
+
+
+<style type="text/css">
+	.bg-news {
+		background: #222222;
+		color: #fff;
+		height: 20vh;
+		position: relative;
+	}
+</style>
+
+
+<script type="text/javascript">
+	$('.loop').owlCarousel({
+    left: true,
+    items:2,
+    loop:false,
+    margin:10,
+    responsive:{
+        600:{
+            items:4
+        }
+    }
+});
+</script>
+
+{% endblock %}

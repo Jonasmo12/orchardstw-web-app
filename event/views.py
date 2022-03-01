@@ -18,7 +18,6 @@ class EventDetailView(View):
 	template_name = 'event_detail_view.html'
 	pk_url_kwarg = 'slug'
 
-
 	def get(self, request, slug):
 		event = Event.objects.get(slug=slug)
 		events = Event.objects.all()
