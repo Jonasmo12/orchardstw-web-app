@@ -12,8 +12,18 @@ body, html {
 
 a {
     text-decoration: none !important;
+    color: #185905 !important;
+}
+
+a:hover {
+	color: #F29F05 !important;
 }
 
 p {
     font-size: 16px !important;
+
+}
+
+.accordion-body {
+	font-size: 12px !important;
 }
