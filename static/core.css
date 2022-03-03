@@ -7,7 +7,7 @@ body, html {
 
 .w-100 {
     object-fit: cover !important;
-    height: 60vh !important;
+    height: 80vh !important;
 }
 
 a {
