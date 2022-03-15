@@ -7,7 +7,11 @@ body, html {
 
 .w-100 {
     object-fit: cover !important;
-    height: 80vh !important;
+    height: 50vh !important;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 a {
@@ -17,6 +21,7 @@ a {
 
 a:hover {
 	color: #F29F05 !important;
+    transition: 0.4s;
 }
 
 p {
